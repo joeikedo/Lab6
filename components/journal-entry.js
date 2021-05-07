@@ -71,7 +71,7 @@ class JournalEntry extends HTMLElement {
     /* 
      * TODO: set the entry title, date, and content fields in this component
      */
-    
+    console.log("hi");
     // CODE GOES HERE
 
     if (entry.image) {
