@@ -16,20 +16,29 @@ document.addEventListener('DOMContentLoaded', () => {
    * the current entry for each journal-entry element.
    */
 
-  let url = ""  // SET URL 
+  let url = "https://cse110lab6.herokuapp.com/entries"  // SET URL 
 
-  fetch(url)
-    .then( /* FILL IN RESPONSE HANDLING HERE */ )
-    .then(entries => {
+  fetch(url) //fetch(url) 
+    .then(response => response.json())
+    .then(entries => {  
       entries.forEach((entry) => {
        
         let newPost;  
 
 
         // CODE GOES HERE vvv
-        
 
+        //console.log(entry.title); //Just testing, this does log the actual titles from the source url
 
+        newPost = document.createElement("journal-entry"); //Initializing newPost as an object of our custom journal-entry type
+
+        /*
+        //document.body.appendChild(newPost); //I think these two lines do the same as below? Not sure
+        //document.body.append(newPost);
+        */
+        newPost.entry = entry; // I think this line is what the 'Hint' was referring to. And I think this calls the set() method of journal-entry.js
+        let main = document.querySelector('main');
+        main.appendChild(newPost);
 
 
 

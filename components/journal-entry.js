@@ -71,8 +71,12 @@ class JournalEntry extends HTMLElement {
     /* 
      * TODO: set the entry title, date, and content fields in this component
      */
-    
+
     // CODE GOES HERE
+    
+    
+    
+    
 
     if (entry.image) {
       let entryImage;
@@ -84,7 +88,7 @@ class JournalEntry extends HTMLElement {
        */
 
       // CODE GOES HERE vvv
-
+      
 
 
 
