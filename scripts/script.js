@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
    * the current entry for each journal-entry element.
    */
 
+
   let url = "https://cse110lab6.herokuapp.com/entries"  // SET URL 
 
   fetch(url) //fetch(url) 
@@ -37,7 +38,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //document.body.append(newPost);
         */
         newPost.entry = entry; // I think this line is what the 'Hint' was referring to. And I think this calls the set() method of journal-entry.js
-        
+
         let main = document.querySelector('main');
         main.appendChild(newPost);
 

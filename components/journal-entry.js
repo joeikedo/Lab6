@@ -79,15 +79,24 @@ class JournalEntry extends HTMLElement {
     //console.log(entry.content);
     */
 
-    /* 
-    let thingy = document.getElementsByClassName('entry-content');
-    thingy = entry.title;
-    this.shadowRoot.append(thingy);
+    //this.shadowRoot.append(entry.title); //This displays the titles but not in the right spot
+    
+    /* // Ok, so this code puts "kill me" in the white boxes, exciting!!!
+    let x = this.shadowRoot.querySelector('article');
+    x.innerHTML = "kill me";
     */
 
-    this.shadowRoot.append(entry.title); // Ok... This line achieves the exact same thing as lines 83-85... Why?
+    //These two lines properly put titles in the correct location
+    let header = this.shadowRoot.querySelector('h2');
+    header.innerHTML = entry.title;
 
-    
+    let date = this.shadowRoot.querySelector('p.entry-date'); //You can't just do 'p' since there's two p elements. 
+    date.innerHTML = entry.date;
+
+    let content = this.shadowRoot.querySelector('p.entry-content');
+    content.innerHTML = entry.content;
+
+
     
     
     
