@@ -97,11 +97,6 @@ class JournalEntry extends HTMLElement {
     content.innerHTML = entry.content;
 
 
-    
-    
-    
-    
-    
 
     if (entry.image) {
       let entryImage;
@@ -113,9 +108,25 @@ class JournalEntry extends HTMLElement {
        */
 
       // CODE GOES HERE vvv
-      
+
+      //console.log(entry.image.src); Ok, this is how you access the actual image src
+      //console.log(entry.image.alt); This is how you access the image alt thing
+
+      entryImage = document.createElement("img");
+      entryImage.className = ("entry-image");
+      entryImage.src = entry.image.src;
+      entryImage.alt = entry.image.alt;
+
+      let article = this.shadowRoot.querySelector('article');
+      article.append(entryImage);
 
 
+
+      // I think once you create the image element thing, you insert it kinda like this: 
+      /* 
+      let x = this.shadowRoot.querySelector('article');
+      x.append("hi");
+      */
 
 
       // CODE GOES HERE ^^^
@@ -139,7 +150,7 @@ class JournalEntry extends HTMLElement {
        */
 
       // CODE GOES HERE vvv
-
+      
 
 
 
