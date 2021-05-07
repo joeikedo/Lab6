@@ -79,9 +79,15 @@ class JournalEntry extends HTMLElement {
     //console.log(entry.content);
     */
 
-    let thingy = document.getElementsByClassName('entry-title');
+    /* 
+    let thingy = document.getElementsByClassName('entry-content');
     thingy = entry.title;
     this.shadowRoot.append(thingy);
+    */
+
+    this.shadowRoot.append(entry.title); // Ok... This line achieves the exact same thing as lines 83-85... Why?
+
+    
     
     
     
