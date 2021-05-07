@@ -72,6 +72,17 @@ class JournalEntry extends HTMLElement {
      * TODO: set the entry title, date, and content fields in this component
      */
     // CODE GOES HERE
+
+    /* // Ok, so I guess this is how we access the title/date/content for this specific entry
+    //console.log(entry.title);  
+    //console.log(entry.date); 
+    //console.log(entry.content);
+    */
+
+    let thingy = document.getElementsByClassName('entry-title');
+    thingy = entry.title;
+    this.shadowRoot.append(thingy);
+    
     
     
     

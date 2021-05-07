@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //document.body.append(newPost);
         */
         newPost.entry = entry; // I think this line is what the 'Hint' was referring to. And I think this calls the set() method of journal-entry.js
+        
         let main = document.querySelector('main');
         main.appendChild(newPost);
 
