@@ -150,10 +150,15 @@ class JournalEntry extends HTMLElement {
        */
 
       // CODE GOES HERE vvv
-      
+      entryAudio = document.createElement("audio");
+      entryAudio.className = ("entry-audio");
+
+      entryAudio.src = entry.audio;
+      entryAudio.controls = true;
 
 
-
+      let article = this.shadowRoot.querySelector('article');
+      article.append(entryAudio);
 
 
       // CODE GOES HERE ^^^
